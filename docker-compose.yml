@@ -1,0 +1,44 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: juvo-root
+      MARIADB_DATABASE: juvo
+      MARIADB_USER: juvo
+      MARIADB_PASSWORD: juvo
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh --connect --innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  app:
+    build:
+      context: .
+    ports:
+      - "8080:8000"
+    environment:
+      APP_NAME: Juvo
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8080
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_DATABASE: juvo
+      DB_USERNAME: juvo
+      DB_PASSWORD: juvo
+      CACHE_DRIVER: file
+      SESSION_DRIVER: file
+      QUEUE_CONNECTION: sync
+      FILESYSTEM_DISK: local
+      LOG_CHANNEL: stderr
+      FLEETBASE_ENABLED: "false"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  dbdata:

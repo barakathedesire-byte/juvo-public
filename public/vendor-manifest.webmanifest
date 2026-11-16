@@ -1,0 +1,79 @@
+{
+    "name": "Juvo Vendor",
+    "short_name": "Juvo Vendor",
+    "description": "Run your Juvo store: products, orders, payouts and ads.",
+    "id": "/vendor",
+    "start_url": "/vendor/dashboard",
+    "scope": "/vendor",
+    "display": "standalone",
+    "display_override": ["standalone", "minimal-ui", "browser"],
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#f68b1e",
+    "lang": "en",
+    "dir": "ltr",
+    "categories": ["business", "shopping", "productivity"],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/icons/favicon-16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/favicon-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-192-maskable.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icons/icon-512-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "url": "/vendor/dashboard",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        },
+        {
+            "name": "Orders",
+            "short_name": "Orders",
+            "url": "/vendor/orders",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        },
+        {
+            "name": "Products",
+            "short_name": "Products",
+            "url": "/vendor/products",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        },
+        {
+            "name": "Ads",
+            "short_name": "Ads",
+            "url": "/vendor/ads",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        }
+    ]
+}

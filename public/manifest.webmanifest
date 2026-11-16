@@ -1,0 +1,73 @@
+{
+    "name": "Juvo — Online Marketplace",
+    "short_name": "Juvo",
+    "description": "Shop, sell and get help on Juvo, Tanzania's multi-vendor marketplace.",
+    "id": "/",
+    "start_url": "/?source=pwa",
+    "scope": "/",
+    "display": "standalone",
+    "display_override": ["standalone", "minimal-ui", "browser"],
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#f68b1e",
+    "lang": "en",
+    "dir": "ltr",
+    "categories": ["shopping", "business", "lifestyle"],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/icons/favicon-16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/favicon-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icons/icon-192-maskable.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icons/icon-512-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Help & Support",
+            "short_name": "Help",
+            "url": "/help",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        },
+        {
+            "name": "My Cart",
+            "short_name": "Cart",
+            "url": "/cart",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        },
+        {
+            "name": "Track an order",
+            "short_name": "Track",
+            "url": "/help#track",
+            "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class StaffDepartment extends Model
+{
+    protected $fillable = ['name', 'slug', 'description', 'is_active'];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    public function users()
+    {
+        return $this->hasMany(User::class, 'department_id');
+    }
+
+    public function positions()
+    {
+        return $this->hasMany(Position::class, 'department_id');
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+}

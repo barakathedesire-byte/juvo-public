@@ -1,0 +1,59 @@
+/* Juvo admin rebrand — themeable via CSS variables (see AdminSettingsService).
+   The variables are emitted inline by the admin layout; the hex fallbacks keep
+   the orange brand when settings are absent. */
+
+#sidebar {
+    background: var(--juvo-sidebar-bg, #1f2430);
+}
+#sidebar .nav-link {
+    color: var(--juvo-sidebar-text, #cbd3e1);
+    border-radius: var(--juvo-radius, 0.5rem);
+}
+#sidebar .nav-link.active {
+    background: var(--juvo-primary, #f68b1e);
+    color: #fff;
+}
+#sidebar .nav-link.active i,
+#sidebar .nav-link.active span {
+    color: #fff;
+}
+#sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, .06);
+}
+
+.card-header-bg,
+.card-header {
+    background: linear-gradient(135deg, var(--juvo-primary, #f68b1e) 0%, var(--juvo-accent, #d9760c) 100%) !important;
+    color: #fff !important;
+    border-bottom: 0 !important;
+}
+
+.btn-primary {
+    background-color: var(--juvo-primary, #f68b1e) !important;
+    border-color: var(--juvo-primary, #f68b1e) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--juvo-accent, #d9760c) !important;
+    border-color: var(--juvo-accent, #d9760c) !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--juvo-primary, #f68b1e) !important;
+    border-bottom-color: var(--juvo-primary, #f68b1e) !important;
+}
+a {
+    color: var(--juvo-primary, #f68b1e);
+}
+.page-item.active .page-link {
+    background-color: var(--juvo-primary, #f68b1e) !important;
+    border-color: var(--juvo-primary, #f68b1e) !important;
+}
+.dt-heading {
+    color: #fff !important;
+}
+
+body {
+    background: var(--juvo-content-bg, #f4f5f7);
+    font-family: var(--juvo-font, 'Nunito'), system-ui, sans-serif;
+}
